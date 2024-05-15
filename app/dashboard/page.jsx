@@ -8,9 +8,9 @@ export default async function Page() {
   const sales = await getSales();
 
   return (
-    <main className="flex min-h-screen flex-col items-center w-full">
+    <main className="flex min-h-screen flex-col  w-full">
       <Banner title="Daily Sales" />
-      <div className="p-10 w-full h-full ">
+      <div className="p-10 w-full h-full max-w-5xl">
         <DataTable columns={columns} data={sales} />
         <Stats data={sales} />
       </div>

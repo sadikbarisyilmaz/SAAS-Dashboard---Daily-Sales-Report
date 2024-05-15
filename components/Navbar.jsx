@@ -9,21 +9,23 @@ import { HomeIcon } from "lucide-react";
 
 export default function Navbar() {
   return (
-    <div className="w-60 border-r  min-h-screen">
-      <div className="w-full p-4 flex flex-col gap-4  h-full">
-        <div className="p-2">
+    <div className="w-full md:w-60 border-b md:border-r md:border-b-0 md:h-screen fixed bg-background z-50">
+      <div className="w-full p-4 flex md:flex-col gap-4  h-full">
+        <div className="p-2 flex md:flex-col">
           <Link className="link" href="/">
             <HomeIcon />
           </Link>
         </div>
-        <Separator />
-        <div className="flex flex-col justify-between h-full">
-          <div className="p-2 flex flex-col gap-4">
+        <div className="hidden md:flex">
+          <Separator />
+        </div>
+        <div className="flex md:flex-col flex-row justify-between h-full w-full">
+          <div className="p-2 flex flex-col gap-4  justify-end md:justify-start">
             <Link className="link" href="/dashboard">
               Daily Sales
             </Link>
           </div>
-          <div className="w-full flex justify-between">
+          <div className="flex gap-2 md:gap-0 justify-end md:justify-between">
             <Button variant="outline" onClick={signOut}>
               Sign Out
             </Button>
