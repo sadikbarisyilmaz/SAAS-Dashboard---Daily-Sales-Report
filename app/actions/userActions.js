@@ -2,7 +2,6 @@
 import { connectToDataBase } from "@/database"
 import User from "@/models/user"
 
-
 export const getUser = async () => {
 
     try {
