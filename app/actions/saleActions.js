@@ -14,4 +14,5 @@ export const getSales = async () => {
         console.log(error.message);
         return { error: "Something went wrong" }
     }
+
 }

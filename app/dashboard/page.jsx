@@ -1,14 +1,16 @@
-import { SalesTable } from "@/components/SalesTable";
 import { getSales } from "../actions/saleActions";
+import { DataTable } from "@/components/sales-table/data-table";
+import { columns } from "@/components/sales-table/columns";
+import Banner from "@/components/Banner";
 
 export default async function Page() {
   const sales = await getSales();
 
   return (
-    <main className="flex min-h-screen flex-col items-center p-10 w-full">
-      Dashboard
-      <div>
-        <SalesTable sales={sales} />
+    <main className="flex min-h-screen flex-col items-center w-full">
+      <Banner title="Daily Sales" />
+      <div className="p-10 w-full h-full">
+        <DataTable columns={columns} data={sales} />
       </div>
     </main>
   );

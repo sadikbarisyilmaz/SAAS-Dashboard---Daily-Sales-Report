@@ -5,6 +5,7 @@ import { Separator } from "./ui/separator";
 import { ModeToggle } from "@/components/ModeToggle";
 import { Button } from "@/components/ui/button";
 import { signOut } from "next-auth/react";
+import { HomeIcon } from "lucide-react";
 
 export default function Navbar() {
   return (
@@ -12,14 +13,17 @@ export default function Navbar() {
       <div className="w-full p-4 flex flex-col gap-4  h-full">
         <div className="p-2">
           <Link className="link" href="/">
-            Home
+            <HomeIcon />
           </Link>
         </div>
         <Separator />
         <div className="flex flex-col justify-between h-full">
-          <div className="p-2 flex">
-            <Link className="w-full link" href="/dashboard">
+          <div className="p-2 flex flex-col gap-4">
+            <Link className="link" href="/dashboard">
               Daily Sales
+            </Link>
+            <Link className="link" href="/dashboard/statistics">
+              Statistics
             </Link>
           </div>
           <div className="w-full flex justify-between">
