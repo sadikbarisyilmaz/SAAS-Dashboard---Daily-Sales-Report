@@ -10,8 +10,8 @@ export default function Home() {
             Welcome to Your Company&apos;s Dashboard !
           </h1>
           <p className="leading-7 text-foreground/80">
-            <Link className=" link" href="/dashboard">
-              Go to Your Dashboard
+            <Link className="link" href="/login">
+              Login to Continue
             </Link>
           </p>
         </div>

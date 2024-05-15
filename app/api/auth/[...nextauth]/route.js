@@ -49,19 +49,16 @@ async function auth(req, res) {
         },
         pages: {
             signIn: '/login',
-            error: '/error',
 
         },
         callbacks: {
             async jwt({ token, user }) {
-
                 if (user) {
                     token.id = user._id.toString();
                     token.email = user.email;
                     token.name = user.fullName;
                 }
                 return token;
-
             },
             async session({ session, token, user }) {
                 session.user.id = token.id;

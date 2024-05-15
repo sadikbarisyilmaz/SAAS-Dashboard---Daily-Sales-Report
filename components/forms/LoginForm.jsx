@@ -29,15 +29,13 @@ const LoginForm = () => {
 
     const { email, password } = values;
     const result = await signIn("credentials", {
-      redirect: true,
-      callbackUrl: "/dashboard",
+      redirect: false,
       email,
       password,
     });
 
     if (result?.error) {
       setIsSubmitting(false);
-
       console.log(result.error || "Login failed!");
       toast({
         title: "Error !",
@@ -48,11 +46,10 @@ const LoginForm = () => {
         title: "Login Successful !",
         description: "- Redirecting to Dashboard",
       });
-
-      console.log("Login Successful");
-      // setTimeout(() => {
-      //   router.push(`/dashboard`);
-      // }, 1000);
+      setIsSubmitting(false);
+      setTimeout(() => {
+        router.push(`/dashboard`);
+      }, 1500);
     }
   };
 
