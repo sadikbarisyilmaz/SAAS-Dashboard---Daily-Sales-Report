@@ -49,7 +49,7 @@ const LoginForm = () => {
       setIsSubmitting(false);
       setTimeout(() => {
         router.push(`/dashboard`);
-      }, 1500);
+      }, 500);
     }
   };
 
