@@ -1,5 +1,3 @@
-import React from "react";
-
 export default function Banner({ title }) {
   return (
     <div className="p-10 w-full h-32 flex items-center border-b">

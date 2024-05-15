@@ -49,9 +49,7 @@ const LoginForm = () => {
       });
 
       console.log("Login Successful");
-      setTimeout(() => {
-        router.push(`/dashboard`);
-      }, 500);
+      router.push(`/dashboard`);
     }
   };
 

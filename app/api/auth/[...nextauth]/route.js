@@ -53,7 +53,6 @@ async function auth(req, res) {
 
         },
         callbacks: {
-
             async jwt({ token, user }) {
 
                 if (user) {
