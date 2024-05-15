@@ -29,7 +29,8 @@ const LoginForm = () => {
 
     const { email, password } = values;
     const result = await signIn("credentials", {
-      redirect: false,
+      redirect: true,
+      callbackUrl: "/dashboard",
       email,
       password,
     });
@@ -49,9 +50,9 @@ const LoginForm = () => {
       });
 
       console.log("Login Successful");
-      setTimeout(() => {
-        router.push(`/dashboard`);
-      }, 1000);
+      // setTimeout(() => {
+      //   router.push(`/dashboard`);
+      // }, 1000);
     }
   };
 
