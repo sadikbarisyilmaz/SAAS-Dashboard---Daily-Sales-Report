@@ -22,9 +22,6 @@ export default function Navbar() {
             <Link className="link" href="/dashboard">
               Daily Sales
             </Link>
-            <Link className="link" href="/dashboard/statistics">
-              Statistics
-            </Link>
           </div>
           <div className="w-full flex justify-between">
             <Button variant="outline" onClick={signOut}>
