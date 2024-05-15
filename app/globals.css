@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+.link {
+  @apply hover:text-primary/80 transition-all duration-200;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
